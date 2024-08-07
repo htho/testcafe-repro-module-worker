@@ -1,9 +1,7 @@
 import { fixture, test, Selector } from "testcafe";
 
 fixture("Worker")
-	// .page(`https://htho.github.io/testcafe-repro-worker-module-safari/`)
 	.page(`http://127.0.0.1:3000/index.html`)
-
 
 test("works", async(t) => {
     await t.expect(Selector("#out").textContent).eql("");

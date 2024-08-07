@@ -1,7 +1,7 @@
 {
   "scripts": {
     "serve": "serve",
-    "test": "testcafe chrome test.tc.ts --disable-native-automation"
+    "test": "testcafe firefox test.tc.ts"
   },
   "dependencies": {
     "serve": "^14.2.3",
