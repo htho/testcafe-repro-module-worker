@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker With Modules</title>
+</head>
+<body>
+    <h1>Worker With Modules</h1>
+    <button id="btn">get the answer!</button>
+    <output id="out"></output>
+</body>
+<script>
+    const btn = document.getElementById("btn");
+    const out = document.getElementById("out");
+    const worker = new Worker("./worker.mjs", {type: "module"});
+    btn.onclick = () => worker.postMessage("");
+    worker.onmessage = ev => out.textContent = ev.data;
+</script>
+</html>
